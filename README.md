@@ -1,1 +1,0 @@
-# faculty_infortmation_system

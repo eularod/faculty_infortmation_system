@@ -1,0 +1,177 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a20202 0%, #5c0000 100%); 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3); 
+    width: 100%; 
+    max-width: 420px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.school-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 4px solid #a20202;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(162, 2, 2, 0.2);
+}
+
+.school-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a20202;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.system-name {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+h2 { 
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group { 
+    margin-bottom: 20px; 
+}
+
+label { 
+    display: block; 
+    margin-bottom: 8px; 
+    color: #555; 
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input[type="text"], 
+input[type="password"] { 
+    width: 100%; 
+    padding: 12px 15px; 
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus { 
+    outline: none; 
+    border-color: #a20202;
+    box-shadow: 0 0 0 3px rgba(162, 2, 2, 0.1);
+}
+
+button { 
+    width: 100%; 
+    padding: 14px; 
+    background: #a20202; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    font-weight: 600;
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover:not(:disabled) { 
+    background: #8B0303;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(162, 2, 2, 0.3);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.error { 
+    background: #fee; 
+    border: 2px solid #fcc; 
+    color: #c33; 
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    margin-bottom: 20px;
+    font-size: 14px;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.info { 
+    background: #e7f3ff; 
+    border: 2px solid #b3d9ff; 
+    color: #004085; 
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    margin-top: 20px; 
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+    
+    .school-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .school-name {
+        font-size: 18px;
+    }
+    
+    .system-name {
+        font-size: 14px;
+    }
+}
